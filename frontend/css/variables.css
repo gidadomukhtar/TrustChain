@@ -1,0 +1,78 @@
+/* ============================================
+   TRUSTCHAIN DESIGN TOKENS
+   Version: 1.0
+============================================ */
+
+:root {
+    /* ========= Colors ========= */
+    --bg-primary: #07111F;
+    --bg-secondary: #0F172A;
+    --bg-tertiary: #162233;
+    --bg-card: rgba(255, 255, 255, 0.05);
+    --primary: #3B82F6;
+    --primary-light: #60A5FA;
+    --accent: #00E5FF;
+    --accent-dark: #00B8D4;
+    --success: #22C55E;
+    --warning: #FBBF24;
+    --danger: #EF4444;
+    --white: #FFFFFF;
+    --text-primary: #F8FAFC;
+    --text-secondary: #CBD5E1;
+    --text-muted: #94A3B8;
+    --border: rgba(255, 255, 255, .08);
+    /* ========= Glass ========= */
+    --glass-bg: rgba(255, 255, 255, .05);
+    --glass-border: rgba(255, 255, 255, .10);
+    --glass-blur: blur(18px);
+    /* ========= Shadows ========= */
+    --shadow-sm: 0 4px 12px rgba(0, 0, 0, .15);
+    --shadow-md: 0 10px 30px rgba(0, 0, 0, .25);
+    --shadow-lg: 0 18px 45px rgba(0, 0, 0, .35);
+    --glow-blue: 0 0 25px rgba(59, 130, 246, .45);
+    --glow-cyan: 0 0 25px rgba(0, 229, 255, .45);
+    --glow-success: 0 0 20px rgba(34, 197, 94, .45);
+    /* ========= Border Radius ========= */
+    --radius-sm: 8px;
+    --radius-md: 14px;
+    --radius-lg: 20px;
+    --radius-xl: 28px;
+    --radius-pill: 999px;
+    /* ========= Fonts ========= */
+    --font-heading: "Space Grotesk", sans-serif;
+    --font-body: "Inter", sans-serif;
+    --font-code: "JetBrains Mono", monospace;
+    /* ========= Font Sizes ========= */
+    --fs-xs: .75rem;
+    --fs-sm: .875rem;
+    --fs-md: 1rem;
+    --fs-lg: 1.125rem;
+    --fs-xl: 1.5rem;
+    --fs-2xl: 2rem;
+    --fs-3xl: 3rem;
+    --fs-4xl: 4rem;
+    /* ========= Font Weights ========= */
+    --fw-normal: 400;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+    /* ========= Spacing ========= */
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 20px;
+    --space-6: 24px;
+    --space-8: 32px;
+    --space-10: 40px;
+    --space-12: 48px;
+    --space-16: 64px;
+    --space-20: 80px;
+    /* ========= Layout ========= */
+    --container: 1280px;
+    --navbar-height: 80px;
+    /* ========= Animation ========= */
+    --transition-fast: .2s ease;
+    --transition: .35s ease;
+    --transition-slow: .6s ease;
+}

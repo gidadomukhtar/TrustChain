@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Verify Digital Asset | TrustChain</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../css/variables.css" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/utilities.css">
+    <link rel="stylesheet" href="../css/animations.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+
+<body>
+    <div class="verify-page">
+        <div class="container">
+            <div class="verify-header">
+                <h1>Verify Digital Asset</h1>
+
+                <p>Upload a document, scan a QR code or enter a TrustChain ID.</p>
+            </div>
+
+            <div class="verify-grid">
+                <!-- Upload -->
+
+                <div class="glass upload-card">
+                    <h2>Upload Document</h2>
+
+                    <div class="upload-area">
+                        <div class="upload-icon">⬆</div>
+
+                        <h3>Drag & Drop</h3>
+
+                        <p>or click to browse</p>
+
+                        <label for="document">
+
+                            Choose Digital Asset
+                            
+                            </label>
+
+                        <input id="document" name="document" type="file" title="Choose Digital Asset" aria-label="Choose Digital Asset">
+                    </div>
+
+                    <div class="divider">
+                        <span>OR</span>
+                    </div>
+
+                    <input class="trust-input" type="text" placeholder="Enter TrustChain ID" />
+
+                    <button id="verifyBtn" class="btn btn-primary">Verify Now</button>
+                </div>
+
+                <!-- Report -->
+
+                <div class="glass report-card">
+                    <div class="badge">TRUST REPORT</div>
+
+                    <div class="progress">
+                        <div id="progressBar"></div>
+                    </div>
+
+                    <h2>Status</h2>
+
+                    <div id="statusText" class="verify-status">Waiting...</div>
+
+                    <div class="trust-score">
+                        <span id="trustScore"> -- </span>
+                    </div>
+
+                    <div class="report-row">
+                        <span>Digital Signature</span>
+
+                        <strong id="sig"> Pending </strong>
+                    </div>
+
+                    <div class="report-row">
+                        <span>Document Integrity</span>
+
+                        <strong id="hash"> Pending </strong>
+                    </div>
+
+                    <div class="report-row">
+                        <span>QR Verification</span>
+
+                        <strong id="qr"> Pending </strong>
+                    </div>
+
+                    <div class="report-row">
+                        <span>Sentinel AI</span>
+
+                        <strong id="ai"> Pending </strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/verify.js"></script>
+</body>
+
+</html>

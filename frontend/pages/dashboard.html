@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Dashboard | TrustChain</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../css/variables.css" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/utilities.css" />
+    <link rel="stylesheet" href="../css/animations.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+
+        <aside class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">TC</div>
+
+                <span>TrustChain</span>
+            </div>
+
+            <nav>
+                <a class="active" href="#">🏠 Dashboard</a>
+
+                <a href="verify.html">🔍 Verify</a>
+
+                <a href="issue.html">📄 Issue Asset</a>
+
+                <a href="report.html">📊 Reports</a>
+
+                <a href="#">⚙ Settings</a>
+
+                <a href="login.html">↩ Logout</a>
+            </nav>
+        </aside>
+
+        <!-- Main -->
+
+        <main class="main-content">
+            <header class="topbar">
+                <div>
+                    <h1>Welcome back 👋</h1>
+
+                    <p>Here's your TrustChain overview.</p>
+                </div>
+
+                <div class="badge">Sentinel AI Online</div>
+            </header>
+
+            <!-- Stats -->
+
+            <section class="stats-grid">
+                <div class="card glass">
+                    <h3>Total Assets</h3>
+
+                    <div class="trust-score">124</div>
+                </div>
+
+                <div class="card glass">
+                    <h3>Verified Today</h3>
+
+                    <div class="trust-score">38</div>
+                </div>
+
+                <div class="card glass">
+                    <h3>Trust Score</h3>
+
+                    <div class="trust-score">99.8</div>
+                </div>
+
+                <div class="card glass">
+                    <h3>Threats Blocked</h3>
+
+                    <div class="trust-score">12</div>
+                </div>
+            </section>
+
+            <!-- Recent Activity -->
+
+            <section>
+                <div class="glass table-card">
+                    <h2>Recent Activity</h2>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Document</th>
+
+                                <th>Status</th>
+
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Degree Certificate</td>
+
+                                <td class="status-success">Verified</td>
+                                <td>Today</td>
+                            </tr>
+
+                            <tr>
+                                <td>Medical Report</td>
+
+                                <td class="status-success">Verified</td>
+
+                                <td>Yesterday</td>
+                            </tr>
+
+                            <tr>
+                                <td>Employment Letter</td>
+
+                                <td class="status-success">Verified</td>
+
+                                <td>27 Jun</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="../js/dashboard.js"></script>
+</body>
+
+</html>

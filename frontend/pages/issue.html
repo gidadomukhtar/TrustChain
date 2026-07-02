@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Issue Digital Asset | TrustChain</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/variables.css">
+
+    <link rel="stylesheet" href="../css/reset.css">
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="stylesheet" href="../css/components.css">
+
+    <link rel="stylesheet" href="../css/layout.css">
+
+    <link rel="stylesheet" href="../css/utilities.css">
+
+    <link rel="stylesheet" href="../css/animations.css">
+
+    <link rel="stylesheet" href="../css/responsive.css">
+
+</head>
+
+<body>
+
+    <div class="container issue-page">
+
+        <div class="issue-header">
+
+            <h1>Issue Digital Asset</h1>
+
+            <p>
+
+                Securely issue a verifiable digital asset protected by TrustChain cryptography.
+
+            </p>
+
+        </div>
+
+
+
+        <form class="glass issue-form">
+
+            <div class="form-grid">
+
+                <div>
+
+                    <label>
+
+                    Asset Title
+
+                </label>
+
+                    <input type="text" placeholder="e.g. Degree Certificate">
+
+                </div>
+
+                <div>
+
+                    <label>
+
+                    Asset Type
+
+                </label>
+
+                    <label for="assetType">
+
+                    Asset Type
+                    
+                    </label>
+
+                    <select id="assetType" name="assetType" title="Asset Type" aria-label="Asset Type">
+
+                    <option>Certificate</option>
+
+                    <option>Medical Record</option>
+
+                    <option>Employment Letter</option>
+
+                    <option>Invoice</option>
+
+                    <option>Contract</option>
+
+                    <option>ID Card</option>
+
+                    <option>License</option>
+
+                    <option>Other</option>
+
+                </select>
+
+                </div>
+
+                <div>
+
+                    <label>
+
+                    Issuer
+
+                </label>
+
+                    <input type="text" placeholder="Organization Name">
+
+                </div>
+
+                <div>
+
+                    <label>
+
+                    Recipient
+
+                </label>
+
+                    <input type="text" placeholder="Recipient Name">
+
+                </div>
+
+            </div>
+
+
+
+            <label>
+
+            Description
+
+        </label>
+
+            <textarea rows="5" placeholder="Asset description..."></textarea>
+
+
+
+            <label>
+
+            Upload Digital Asset
+
+        </label>
+
+            <label for="assetFile">
+
+            Upload Digital Asset
+            
+            </label>
+
+            <input id="assetFile" name="assetFile" type="file" title="Upload Digital Asset" aria-label="Upload Digital Asset">
+
+
+
+            <div class="issue-options">
+
+                <div class="option-item">
+                    <input type="checkbox" id="generateQR" name="generateQR">
+
+                    <label for="generateQR">
+                        Generate QR Verification
+                    </label>
+                </div>
+
+                <div class="option-item">
+                    <input type="checkbox" id="digitalSignature" name="digitalSignature">
+
+                    <label for="digitalSignature">
+                        Create Digital Signature
+                    </label>
+                </div>
+
+                <div class="option-item">
+                    <input type="checkbox" id="sentinelAI" name="sentinelAI">
+
+                    <label for="sentinelAI">
+                        Run Sentinel AI Analysis
+                    </label>
+                </div>
+
+            </div>
+
+
+
+            <button class="btn btn-primary" type="submit">
+
+            Issue Digital Asset
+
+        </button>
+
+        </form>
+
+    </div>
+
+    <script src="../js/issue.js"></script>
+
+</body>
+
+</html>
