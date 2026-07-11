@@ -5,97 +5,99 @@ verifyBtn.addEventListener("click", () => {
     const status = document.getElementById("statusText");
     const score = document.getElementById("trustScore");
 
+    const auth = document.getElementById("auth");
+    const risk = document.getElementById("risk");
+    const ocr = document.getElementById("ocr");
+    const meta = document.getElementById("meta");
     const sig = document.getElementById("sig");
     const hash = document.getElementById("hash");
     const qr = document.getElementById("qr");
     const ai = document.getElementById("ai");
+    const recommendation = document.getElementById("recommendation");
 
     const progress = document.getElementById("progressBar");
 
-    // Reset
-
     progress.style.width = "0%";
-
-    status.style.color = "#FBBF24";
-    status.innerHTML = "Initializing TrustCore...";
 
     score.innerHTML = "--";
 
-    sig.innerHTML = "Waiting...";
-    hash.innerHTML = "Waiting...";
-    qr.innerHTML = "Waiting...";
-    ai.innerHTML = "Waiting...";
+    status.style.color = "#FBBF24";
 
-    // Step 1
+    status.innerHTML = "Booting SINTEL AI v1.0...";
+    [
+        auth,
+        risk,
+        ocr,
+        meta,
+        sig,
+        hash,
+        qr,
+        ai,
+        recommendation
+    ].forEach(item => item.innerHTML = "Pending");
 
     setTimeout(() => {
 
-        progress.style.width = "20%";
+        progress.style.width = "10%";
+        status.innerHTML = "Reading document with OCR...";
+        ocr.innerHTML = "Processing...";
 
-        status.innerHTML = "Generating SHA-256 Hash...";
+    }, 800);
 
-    }, 1000);
+    setTimeout(() => {
 
-    // Step 2
+        progress.style.width = "25%";
+        ocr.innerHTML = "✔ Complete";
+        status.innerHTML = "Analyzing metadata...";
+        meta.innerHTML = "Passed";
+
+    }, 1600);
 
     setTimeout(() => {
 
         progress.style.width = "40%";
+        status.innerHTML = "Generating cryptographic hash...";
+        hash.innerHTML = "SHA-256 Valid";
 
-        hash.innerHTML = "✔ Valid";
-
-        status.innerHTML = "Verifying Digital Signature...";
-
-    }, 2000);
-
-    // Step 3
+    }, 2400);
 
     setTimeout(() => {
 
-        progress.style.width = "60%";
+        progress.style.width = "55%";
+        status.innerHTML = "Validating digital signature...";
+        sig.innerHTML = "Verified";
 
-        sig.innerHTML = "✔ Valid";
-
-        status.innerHTML = "Checking QR Authentication...";
-
-    }, 3000);
-
-    // Step 4
+    }, 3200);
 
     setTimeout(() => {
 
-        progress.style.width = "80%";
-
-        qr.innerHTML = "✔ Successful";
-
-        status.innerHTML = "Running Sentinel AI...";
+        progress.style.width = "70%";
+        status.innerHTML = "Checking QR authenticity...";
+        qr.innerHTML = "Verified";
 
     }, 4000);
 
-    // Step 5
-
     setTimeout(() => {
 
-        progress.style.width = "95%";
-
-        ai.innerHTML = "✔ Passed";
-
-        status.innerHTML = "Calculating Trust Score...";
+        progress.style.width = "85%";
+        status.innerHTML = "SINTEL AI is analyzing 4,812 security signals...";
+        auth.innerHTML = "99.84%";
+        risk.innerHTML = "LOW";
+        ai.innerHTML = "Authentic";
 
     }, 5000);
-
-    // Final
 
     setTimeout(() => {
 
         progress.style.width = "100%";
 
         status.style.color = "#22C55E";
+        status.innerHTML = "✅ AUTHENTIC DOCUMENT VERIFIED";
 
-        status.innerHTML = "🟢 VERIFIED";
+        score.innerHTML = "99.84%";
 
-        score.innerHTML = "99.8 / 100";
+        recommendation.innerHTML = "SAFE TO ACCEPT";
 
-    }, 6000);
+    }, 6200);
 
 });

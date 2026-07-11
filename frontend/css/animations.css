@@ -7,6 +7,7 @@
         opacity: 0;
         transform: translateY(40px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -17,9 +18,11 @@
     0% {
         box-shadow: 0 0 0 0 rgba(0, 229, 255, .5);
     }
+
     70% {
         box-shadow: 0 0 0 25px rgba(0, 229, 255, 0);
     }
+
     100% {
         box-shadow: 0 0 0 0 rgba(0, 229, 255, 0);
     }
@@ -29,9 +32,11 @@
     0% {
         filter: drop-shadow(0 0 8px #00E5FF);
     }
+
     50% {
         filter: drop-shadow(0 0 20px #00E5FF);
     }
+
     100% {
         filter: drop-shadow(0 0 8px #00E5FF);
     }
@@ -47,4 +52,102 @@
 
 .pulse {
     animation: pulse 2s infinite;
+}
+
+/* SINTEL AI Verification */
+
+@keyframes pulseGlow {
+
+    0% {
+        box-shadow: 0 0 0 rgba(59, 130, 246, .2);
+    }
+
+    50% {
+        box-shadow: 0 0 30px rgba(59, 130, 246, .45);
+    }
+
+    100% {
+        box-shadow: 0 0 0 rgba(59, 130, 246, .2);
+    }
+
+}
+
+.report-card {
+    animation: pulseGlow 2.5s infinite;
+}
+
+.progress {
+    height: 10px;
+    background: #1e293b;
+    border-radius: 999px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+#progressBar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg,
+            #2563eb,
+            #00E5FF,
+            #22C55E);
+    transition: width .8s ease;
+}
+
+.card {
+    transition: .35s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.table-card tr {
+    animation: fadeIn .5s ease;
+}
+
+@keyframes aiPulse {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+.pipeline-step {
+
+    animation: aiPulse 3s infinite;
+
+}
+
+.pipeline-step:nth-child(3) {
+
+    animation-delay: .4s;
+
+}
+
+.pipeline-step:nth-child(5) {
+
+    animation-delay: .8s;
+
+}
+
+.pipeline-step:nth-child(7) {
+
+    animation-delay: 1.2s;
+
+}
+
+.pipeline-step:nth-child(9) {
+
+    animation-delay: 1.6s;
+
 }

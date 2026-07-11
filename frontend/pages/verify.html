@@ -12,7 +12,9 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet" />
 
     <link rel="stylesheet" href="../css/variables.css" />
     <link rel="stylesheet" href="../css/reset.css" />
@@ -28,31 +30,37 @@
     <div class="verify-page">
         <div class="container">
             <div class="verify-header">
-                <h1>Verify Digital Asset</h1>
+                <h1>Verify with SINTEL AI</h1>
 
-                <p>Upload a document, scan a QR code or enter a TrustChain ID.</p>
+                <p>
+                    Upload a certificate, transcript, identity document or scan a QR code.
+                    SINTEL AI will analyze authenticity, metadata, cryptographic integrity and forgery risk in seconds.
+                </p>
             </div>
 
             <div class="verify-grid">
                 <!-- Upload -->
 
                 <div class="glass upload-card">
-                    <h2>Upload Document</h2>
+                    <h2>Upload for AI Analysis</h2>
 
                     <div class="upload-area">
                         <div class="upload-icon">⬆</div>
 
-                        <h3>Drag & Drop</h3>
+                        <h3>Drop your document here</h3>
 
-                        <p>or click to browse</p>
+                        <p>
+                            PDF, JPG or PNG • Maximum 10MB
+                        </p>
 
                         <label for="document">
 
                             Choose Digital Asset
-                            
-                            </label>
 
-                        <input id="document" name="document" type="file" title="Choose Digital Asset" aria-label="Choose Digital Asset">
+                        </label>
+
+                        <input id="document" name="document" type="file" title="Choose Digital Asset"
+                            aria-label="Choose Digital Asset">
                     </div>
 
                     <div class="divider">
@@ -61,49 +69,82 @@
 
                     <input class="trust-input" type="text" placeholder="Enter TrustChain ID" />
 
-                    <button id="verifyBtn" class="btn btn-primary">Verify Now</button>
+                    <button id="verifyBtn" class="btn btn-primary">
+                        Analyze with SINTEL AI
+                    </button>
                 </div>
 
                 <!-- Report -->
 
+                <!-- Report -->
+
                 <div class="glass report-card">
-                    <div class="badge">TRUST REPORT</div>
+
+                    <div class="badge">
+                        SINTEL AI v1.0
+                    </div>
+
+                    <h2 style="margin-top:20px;">
+                        SINTEL AI Verification Report
+                    </h2>
 
                     <div class="progress">
                         <div id="progressBar"></div>
                     </div>
 
-                    <h2>Status</h2>
-
-                    <div id="statusText" class="verify-status">Waiting...</div>
+                    <div id="statusText" class="verify-status">
+                        Ready for Verification
+                    </div>
 
                     <div class="trust-score">
-                        <span id="trustScore"> -- </span>
+                        <span id="trustScore">--</span>
+                    </div>
+
+                    <div class="report-row">
+                        <span>Authenticity</span>
+                        <strong id="auth">Pending</strong>
+                    </div>
+
+                    <div class="report-row">
+                        <span>Forgery Risk</span>
+                        <strong id="risk">Pending</strong>
+                    </div>
+
+                    <div class="report-row">
+                        <span>OCR Analysis</span>
+                        <strong id="ocr">Pending</strong>
+                    </div>
+
+                    <div class="report-row">
+                        <span>Metadata Integrity</span>
+                        <strong id="meta">Pending</strong>
                     </div>
 
                     <div class="report-row">
                         <span>Digital Signature</span>
-
-                        <strong id="sig"> Pending </strong>
+                        <strong id="sig">Pending</strong>
                     </div>
 
                     <div class="report-row">
-                        <span>Document Integrity</span>
-
-                        <strong id="hash"> Pending </strong>
+                        <span>Cryptographic Hash</span>
+                        <strong id="hash">Pending</strong>
                     </div>
 
                     <div class="report-row">
                         <span>QR Verification</span>
-
-                        <strong id="qr"> Pending </strong>
+                        <strong id="qr">Pending</strong>
                     </div>
 
                     <div class="report-row">
-                        <span>Sentinel AI</span>
-
-                        <strong id="ai"> Pending </strong>
+                        <span>SINTEL AI Verdict</span>
+                        <strong id="ai">Pending</strong>
                     </div>
+
+                    <div class="report-row">
+                        <span>Recommendation</span>
+                        <strong id="recommendation">Pending</strong>
+                    </div>
+
                 </div>
             </div>
         </div>

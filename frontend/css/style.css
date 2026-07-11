@@ -868,6 +868,7 @@ ADMIN
     0% {
         top: 0;
     }
+
     100% {
         top: 100%;
     }
@@ -932,4 +933,308 @@ ADMIN
 
 .toast.warning {
     background: #F59E0B;
+}
+
+/* ==========================
+   HERO UPGRADE
+========================== */
+
+.hero-features {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(180px, 1fr));
+    gap: 16px;
+    margin-top: 35px;
+}
+
+.hero-features div {
+    background: rgba(255, 255, 255, .05);
+    border: 1px solid rgba(255, 255, 255, .08);
+    padding: 15px 18px;
+    border-radius: 14px;
+    backdrop-filter: blur(12px);
+    transition: .3s;
+    font-weight: 600;
+}
+
+.hero-features div:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+    box-shadow: 0 0 25px rgba(0, 229, 255, .15);
+}
+
+.hero-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,
+            rgba(0, 229, 255, .06),
+            transparent 60%);
+    pointer-events: none;
+}
+
+.trust-score {
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.report-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, .06);
+}
+
+.report-row:last-child {
+    border-bottom: none;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    border-radius: 999px;
+    background: rgba(59, 130, 246, .15);
+    color: var(--accent);
+    font-size: .85rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+}
+
+.text-gradient {
+    background: linear-gradient(90deg,
+            var(--primary),
+            var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+@media(max-width:900px) {
+
+    .hero-features {
+        grid-template-columns: 1fr;
+    }
+
+    .hero .container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-card {
+        margin-top: 40px;
+    }
+
+}
+
+/* ==========================
+   SINTEL AI PIPELINE
+========================== */
+
+.ai-pipeline {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 40px;
+
+    margin-top: 50px;
+
+    flex-wrap: wrap;
+
+}
+
+.pipeline-step {
+
+    flex: 1;
+
+    min-width: 170px;
+
+    text-align: center;
+
+    padding: 20px;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, .04);
+
+    border: 1px solid rgba(255, 255, 255, .08);
+
+    transition: .35s;
+
+}
+
+.pipeline-step:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: var(--glow-ai);
+
+}
+
+.step-icon {
+
+    font-size: 3rem;
+
+    margin-bottom: 15px;
+
+}
+
+.pipeline-arrow {
+
+    font-size: 2rem;
+
+    color: var(--accent);
+
+    font-weight: bold;
+
+}
+
+@media(max-width:900px) {
+
+    .ai-pipeline {
+
+        flex-direction: column;
+
+    }
+
+    .pipeline-arrow {
+
+        transform: rotate(90deg);
+
+    }
+
+}
+
+.industry-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 24px;
+
+    margin-top: 60px;
+
+}
+
+.industry-card {
+
+    padding: 30px;
+
+    text-align: center;
+
+    transition: .35s;
+
+}
+
+.industry-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: var(--glow-primary);
+
+}
+
+.industry-card h3 {
+
+    margin: 18px 0 10px;
+
+}
+
+.industry-card p {
+
+    color: var(--text-secondary);
+
+    line-height: 1.6;
+
+}
+/* ==========================
+LIVE DEMO
+========================== */
+
+.ai-demo{
+
+padding:40px;
+
+margin-top:50px;
+
+}
+
+.terminal-header{
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+margin-bottom:25px;
+
+font-family:var(--font-code);
+
+}
+
+.dot{
+
+width:12px;
+
+height:12px;
+
+border-radius:50%;
+
+}
+
+.red{
+
+background:#ef4444;
+
+}
+
+.yellow{
+
+background:#f59e0b;
+
+}
+
+.green{
+
+background:#22c55e;
+
+}
+
+.terminal-window{
+
+background:#020617;
+
+border:1px solid rgba(255,255,255,.08);
+
+border-radius:16px;
+
+padding:25px;
+
+font-family:var(--font-code);
+
+min-height:260px;
+
+line-height:2;
+
+overflow:auto;
+
+margin-bottom:25px;
+
+color:#22C55E;
+
 }
