@@ -12,16 +12,14 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&family=Space+Grotesk:wght@500;700&display=swap"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
 
     <link rel="stylesheet" href="../css/variables.css" />
     <link rel="stylesheet" href="../css/reset.css" />
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/components.css" />
-    <link rel="stylesheet" href="../css/layout.css">
-    <link rel="stylesheet" href="../css/utilities.css">
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/utilities.css" />
     <link rel="stylesheet" href="../css/animations.css" />
     <link rel="stylesheet" href="../css/responsive.css" />
 </head>
@@ -30,11 +28,10 @@
     <div class="verify-page">
         <div class="container">
             <div class="verify-header">
-                <h1>Verify with SINTEL AI</h1>
+                <h1>Verify with SINTEL AI™</h1>
 
                 <p>
-                    Upload a certificate, transcript, identity document or scan a QR code.
-                    SINTEL AI will analyze authenticity, metadata, cryptographic integrity and forgery risk in seconds.
+                    Upload a certificate, transcript, identity document or scan a QR code. SINTEL AI™ will analyze authenticity, metadata, cryptographic integrity and forgery risk in seconds.
                 </p>
             </div>
 
@@ -49,18 +46,11 @@
 
                         <h3>Drop your document here</h3>
 
-                        <p>
-                            PDF, JPG or PNG • Maximum 10MB
-                        </p>
+                        <p>PDF, JPG or PNG • Maximum 10MB</p>
 
-                        <label for="document">
+                        <label for="document"> Choose Digital Asset </label>
 
-                            Choose Digital Asset
-
-                        </label>
-
-                        <input id="document" name="document" type="file" title="Choose Digital Asset"
-                            aria-label="Choose Digital Asset">
+                        <input id="document" name="document" type="file" title="Choose Digital Asset" aria-label="Choose Digital Asset" />
                     </div>
 
                     <div class="divider">
@@ -70,8 +60,8 @@
                     <input class="trust-input" type="text" placeholder="Enter TrustChain ID" />
 
                     <button id="verifyBtn" class="btn btn-primary">
-                        Analyze with SINTEL AI
-                    </button>
+              Analyze with SINTEL AI™
+            </button>
                 </div>
 
                 <!-- Report -->
@@ -79,14 +69,9 @@
                 <!-- Report -->
 
                 <div class="glass report-card">
+                    <div class="badge">SINTEL AI™ v1.0</div>
 
-                    <div class="badge">
-                        SINTEL AI v1.0
-                    </div>
-
-                    <h2 style="margin-top:20px;">
-                        SINTEL AI Verification Report
-                    </h2>
+                    <h2 style="margin-top: 20px">SINTEL AI™ Verification Report</h2>
 
                     <div class="progress">
                         <div id="progressBar"></div>
@@ -98,6 +83,23 @@
 
                     <div class="trust-score">
                         <span id="trustScore">--</span>
+                    </div>
+                    <div class="ai-summary glass">
+                        <h3>SINTEL AI™ Findings</h3>
+
+                        <ul>
+                            <li>✔ OCR Confidence: 99.97%</li>
+
+                            <li>✔ Layout matches issuer template</li>
+
+                            <li>✔ Metadata integrity confirmed</li>
+
+                            <li>✔ Digital signature verified</li>
+
+                            <li>✔ No evidence of manipulation</li>
+
+                            <li>✔ Recommended: ACCEPT DOCUMENT</li>
+                        </ul>
                     </div>
 
                     <div class="report-row">
@@ -136,7 +138,7 @@
                     </div>
 
                     <div class="report-row">
-                        <span>SINTEL AI Verdict</span>
+                        <span>SINTEL AI™ Verdict</span>
                         <strong id="ai">Pending</strong>
                     </div>
 
@@ -144,7 +146,6 @@
                         <span>Recommendation</span>
                         <strong id="recommendation">Pending</strong>
                     </div>
-
                 </div>
             </div>
         </div>

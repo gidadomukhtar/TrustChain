@@ -12,9 +12,7 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&family=Space+Grotesk:wght@500;700&display=swap"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
 
     <link rel="stylesheet" href="../css/variables.css" />
     <link rel="stylesheet" href="../css/reset.css" />
@@ -57,18 +55,25 @@
         <main class="main-content">
             <header class="topbar">
                 <div>
-                    <h1>Welcome back 👋</h1>
+                    <span class="badge"> 🟢 SINTEL AI™ v1.0 ONLINE </span>
 
-                    <p>Here's your TrustChain overview.</p>
+                    <h1>TrustChain Security Operations Center</h1>
+
+                    <p>
+                        Real-time document intelligence, fraud monitoring and trust analytics.
+                    </p>
                 </div>
 
-                <div class="badge">SINTEL AI v1.0 • ONLINE</div>
+                <div style="display: flex; gap: 15px; align-items: center">
+                    <a href="verify.html" class="btn btn-primary"> Verify Document </a>
+
+                    <a href="issue.html" class="btn btn-outline"> Issue Certificate </a>
+                </div>
             </header>
 
             <!-- Stats -->
 
             <section class="stats-grid">
-
                 <div class="card glass">
                     <h3>Documents Verified</h3>
                     <div class="trust-score">12,481</div>
@@ -80,7 +85,7 @@
                 </div>
 
                 <div class="card glass">
-                    <h3>SINTEL AI Accuracy</h3>
+                    <h3>SINTEL AI™ Accuracy</h3>
                     <div class="trust-score">99.84%</div>
                 </div>
 
@@ -88,14 +93,41 @@
                     <h3>Average Verification Time</h3>
                     <div class="trust-score">2.3s</div>
                 </div>
+            </section>
 
+            <section style="margin-top: 40px">
+                <div class="industry-grid">
+                    <div class="glass industry-card">
+                        <h3>🧠 SINTEL AI™ Status</h3>
+
+                        <div class="trust-score">ONLINE</div>
+
+                        <p>Neural forensic engine operational.</p>
+                    </div>
+
+                    <div class="glass industry-card">
+                        <h3>⚡ Average Processing</h3>
+
+                        <div class="trust-score">2.3s</div>
+
+                        <p>Across all supported documents.</p>
+                    </div>
+
+                    <div class="glass industry-card">
+                        <h3>🚨 Threat Level</h3>
+
+                        <div class="trust-score">LOW</div>
+
+                        <p>No active security incidents detected.</p>
+                    </div>
+                </div>
             </section>
 
             <!-- Recent Activity -->
 
             <section>
                 <div class="glass table-card">
-                    <h2>SINTEL AI Verification Feed</h2>
+                    <h2>SINTEL AI™ Verification Feed</h2>
 
                     <table>
                         <thead>
@@ -109,7 +141,6 @@
                         </thead>
 
                         <tbody>
-
                             <tr>
                                 <td>University Degree Certificate</td>
                                 <td class="status-success">Verified</td>
@@ -118,7 +149,7 @@
 
                             <tr>
                                 <td>NYSC Certificate</td>
-                                <td style="color:#ef4444;font-weight:700;">
+                                <td style="color: #ef4444; font-weight: 700">
                                     Forgery Detected
                                 </td>
                                 <td>2 min ago</td>
@@ -141,61 +172,201 @@
                                 <td class="status-success">Verified</td>
                                 <td>31 min ago</td>
                             </tr>
-
                         </tbody>
                     </table>
                 </div>
             </section>
-            <section style="margin-top:40px;">
 
+            <section style="margin-top: 40px">
                 <div class="glass table-card">
+                    <h2>Supported Documents</h2>
 
-                    <h2>SINTEL AI Live Threat Monitor</h2>
+                    <div class="industry-grid">
+                        <div class="industry-card">🎓 Degree</div>
+
+                        <div class="industry-card">📜 NYSC</div>
+
+                        <div class="industry-card">📑 WAEC</div>
+
+                        <div class="industry-card">🏥 Medical</div>
+
+                        <div class="industry-card">🏛 Government</div>
+
+                        <div class="industry-card">💼 Employment</div>
+
+                        <div class="industry-card">🏦 Bank</div>
+
+                        <div class="industry-card">🪪 Identity</div>
+                    </div>
+                </div>
+            </section>
+            <section style="margin-top: 40px">
+                <div class="glass table-card">
+                    <h2>SINTEL AI™ Live Threat Monitor</h2>
 
                     <table>
-
                         <thead>
-
                             <tr>
                                 <th>Threat</th>
                                 <th>Risk</th>
                                 <th>Status</th>
                             </tr>
-
                         </thead>
 
                         <tbody>
-
                             <tr>
                                 <td>Photoshop Manipulation</td>
-                                <td style="color:#ef4444;">High</td>
+                                <td style="color: #ef4444">High</td>
                                 <td>Blocked</td>
                             </tr>
 
                             <tr>
                                 <td>Fake QR Code</td>
-                                <td style="color:#f59e0b;">Medium</td>
+                                <td style="color: #f59e0b">Medium</td>
                                 <td>Blocked</td>
                             </tr>
 
                             <tr>
                                 <td>Metadata Tampering</td>
-                                <td style="color:#ef4444;">High</td>
+                                <td style="color: #ef4444">High</td>
                                 <td>Blocked</td>
                             </tr>
 
                             <tr>
                                 <td>Duplicate Certificate</td>
-                                <td style="color:#22c55e;">Low</td>
+                                <td style="color: #22c55e">Low</td>
                                 <td>Prevented</td>
                             </tr>
-
                         </tbody>
-
                     </table>
-
                 </div>
+            </section>
 
+            <section style="margin-top: 40px">
+                <div class="glass table-card">
+                    <h2>🧠 SINTEL AI Explanation</h2>
+
+                    <p style="
+                margin-top: 20px;
+                color: var(--text-secondary);
+                line-height: 1.8;
+              ">
+                        The uploaded document matches the issuing institution's template with a confidence of <strong>99.84%</strong>. No evidence of font replacement, metadata tampering, QR manipulation, signature mismatch or image editing was detected.
+                        Recommendation:
+
+                        <span style="color: #22c55e; font-weight: bold">
+                ACCEPT DOCUMENT
+              </span>
+                    </p>
+                </div>
+            </section>
+
+            <section style="margin-top: 40px">
+                <div class="glass table-card">
+                    <h2>Global Verification Analytics</h2>
+
+                    <div class="stats-grid">
+                        <div class="card glass">
+                            <h3>Today's Requests</h3>
+                            <div class="trust-score">4,821</div>
+                        </div>
+
+                        <div class="card glass">
+                            <h3>Successful Verifications</h3>
+                            <div class="trust-score">4,766</div>
+                        </div>
+
+                        <div class="card glass">
+                            <h3>Forgery Attempts</h3>
+                            <div class="trust-score" style="color: #ef4444">55</div>
+                        </div>
+
+                        <div class="card glass">
+                            <h3>TrustChain Network Uptime</h3>
+                            <div class="trust-score">99.99%</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section style="margin-top: 40px">
+                <div class="glass table-card">
+                    <h2>Recent AI Decisions</h2>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Document</th>
+
+                                <th>SINTEL AI Verdict</th>
+
+                                <th>Confidence</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>University Transcript</td>
+
+                                <td style="color: #22c55e">Authentic</td>
+
+                                <td>99.94%</td>
+                            </tr>
+
+                            <tr>
+                                <td>NYSC Certificate</td>
+
+                                <td style="color: #ef4444">Forgery Suspected</td>
+
+                                <td>98.73%</td>
+                            </tr>
+
+                            <tr>
+                                <td>Medical License</td>
+
+                                <td style="color: #22c55e">Authentic</td>
+
+                                <td>99.81%</td>
+                            </tr>
+
+                            <tr>
+                                <td>Employment Letter</td>
+
+                                <td style="color: #f59e0b">Needs Manual Review</td>
+
+                                <td>81.24%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section style="margin-top: 40px">
+                <div class="glass table-card">
+                    <h2>🌍 Live Verification Activity</h2>
+
+                    <div id="liveFeed" class="live-feed">
+                        <div class="feed-item">
+                            🟢 University of Lagos verified Degree Certificate • 2 sec ago
+                        </div>
+
+                        <div class="feed-item">
+                            🟢 Zenith Bank verified Bank Statement • 7 sec ago
+                        </div>
+
+                        <div class="feed-item">
+                            🔴 Fake NYSC Certificate blocked • 11 sec ago
+                        </div>
+
+                        <div class="feed-item">
+                            🟢 ABU Zaria verified Transcript • 18 sec ago
+                        </div>
+
+                        <div class="feed-item">
+                            🟢 Federal Ministry verified Employment Letter • 25 sec ago
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
     </div>

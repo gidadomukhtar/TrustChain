@@ -1,93 +1,50 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const badge = document.querySelector(".badge");
 
-    const cards = document.querySelectorAll(".trust-score");
+    setInterval(() => {
+        badge.style.opacity = ".5";
 
-    const values = [
-        12481,
-        412,
-        99.84,
-        2.3
-    ];
+        setTimeout(() => {
+            badge.style.opacity = "1";
+        }, 500);
+    }, 1800);
 
-    cards.forEach((card, index) => {
+    const feed = document.getElementById("liveFeed");
 
-        let start = 0;
+    const activities = [
+        "🟢 University of Ibadan verified Degree Certificate",
 
-        const end = values[index];
+        "🟢 Microsoft Nigeria verified Internship Certificate",
 
-        const duration = 1500;
+        "🟢 WAEC Certificate verified",
 
-        const increment = end / 60;
+        "🔴 Forged NYSC Certificate blocked",
 
-        const timer = setInterval(() => {
+        "🟢 CAC Business Registration verified",
 
-            start += increment;
+        "🟢 Medical License verified",
 
-            if (start >= end) {
+        "🟢 Identity Card verified",
 
-                clearInterval(timer);
+        "🔴 Photoshop manipulation detected",
 
-                if (index === 0)
-                    card.innerHTML = "12,481";
+        "🟢 Passport verification completed",
 
-                else if (index === 1)
-                    card.innerHTML = "412";
-
-                else if (index === 2)
-                    card.innerHTML = "99.84%";
-
-                else
-                    card.innerHTML = "2.3s";
-
-            } else {
-
-                if (index === 2)
-                    card.innerHTML = start.toFixed(2) + "%";
-
-                else if (index === 3)
-                    card.innerHTML = start.toFixed(1) + "s";
-
-                else
-                    card.innerHTML = Math.floor(start);
-
-            }
-
-        }, duration / 60);
-
-    });
-
-    // Live verification feed simulation
-
-    const table = document.querySelector("tbody");
-
-    const events = [
-        ["Bank Statement", "Verified", "Just now"],
-        ["NIN Record", "Verified", "Just now"],
-        ["Professional License", "Forgery Detected", "Just now"],
-        ["NYSC Certificate", "Verified", "Just now"],
-        ["University Transcript", "Verified", "Just now"]
+        "🟢 Employment Letter verified",
     ];
 
     setInterval(() => {
+        const div = document.createElement("div");
 
-        const random = events[Math.floor(Math.random() * events.length)];
+        div.className = "feed-item";
 
-        const row = document.createElement("tr");
+        div.innerHTML =
+            activities[Math.floor(Math.random() * activities.length)] + " • Just now";
 
-        row.innerHTML = `
-            <td>${random[0]}</td>
-            <td style="color:${random[1].includes("Forgery") ? "#ef4444" : "#22c55e"};font-weight:700;">
-                ${random[1]}
-            </td>
-            <td>${random[2]}</td>
-        `;
+        feed.prepend(div);
 
-        table.prepend(row);
-
-        if (table.rows.length > 6) {
-            table.deleteRow(table.rows.length - 1);
+        if (feed.children.length > 8) {
+            feed.removeChild(feed.lastElementChild);
         }
-
-    }, 7000);
-
+    }, 4000);
 });
