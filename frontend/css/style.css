@@ -319,19 +319,32 @@ td {
     padding: 35px;
 }
 
-.upload-area {
-    border: 2px dashed rgba(255, 255, 255, 0.15);
-    border-radius: 20px;
-    padding: 60px 30px;
-    text-align: center;
-    margin: 30px 0;
-    transition: 0.35s;
+.upload-area{
+
+padding:70px 30px;
+
+border-radius:24px;
+
+border:2px dashed rgba(255,255,255,.12);
+
+background:rgba(255,255,255,.03);
+
+transition:.4s;
+
+cursor:pointer;
+
 }
 
-.upload-area:hover {
-    border-color: var(--accent);
-    background: rgba(0, 229, 255, 0.05);
+.upload-area:hover{
+
+border-color:var(--accent);
+
+background:rgba(0,229,255,.05);
+
+transform:translateY(-6px);
+
 }
+
 
 .upload-icon {
     font-size: 3rem;
@@ -1377,4 +1390,11 @@ LIVE DEMO
     50% {
         transform: translateY(-15px);
     }
+}
+.report-top .trust-score{
+
+font-size:5rem;
+
+text-shadow:0 0 30px rgba(0,229,255,.35);
+
 }

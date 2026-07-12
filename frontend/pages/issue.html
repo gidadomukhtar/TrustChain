@@ -3,202 +3,230 @@
 
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Issue Digital Asset | TrustChain</title>
+<title>Issue Digital Certificate | TrustChain</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="../css/variables.css">
-
-    <link rel="stylesheet" href="../css/reset.css">
-
-    <link rel="stylesheet" href="../css/style.css">
-
-    <link rel="stylesheet" href="../css/components.css">
-
-    <link rel="stylesheet" href="../css/layout.css">
-
-    <link rel="stylesheet" href="../css/utilities.css">
-
-    <link rel="stylesheet" href="../css/animations.css">
-
-    <link rel="stylesheet" href="../css/responsive.css">
+<link rel="stylesheet" href="../css/variables.css">
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/layout.css">
+<link rel="stylesheet" href="../css/utilities.css">
+<link rel="stylesheet" href="../css/animations.css">
+<link rel="stylesheet" href="../css/responsive.css">
 
 </head>
 
 <body>
 
-    <div class="container issue-page">
+<div class="container issue-page">
 
-        <div class="issue-header">
+<div class="glass issue-form">
 
-            <h1>Issue Digital Asset</h1>
+<div class="badge">
+🟢 SECURE ISSUANCE PORTAL
+</div>
 
-            <p>
+<h1 style="margin-top:20px;">
+Issue Trusted Digital Asset
+</h1>
 
-                Securely issue a verifiable digital asset protected by TrustChain cryptography.
+<p style="margin-bottom:40px;">
+Generate blockchain-protected certificates verified by SINTEL AI™.
+</p>
 
-            </p>
+<div class="form-grid">
 
-        </div>
+<div>
 
+<label>Recipient Name</label>
 
+<input
+type="text"
+placeholder="John Doe">
 
-        <form class="glass issue-form">
+</div>
 
-            <div class="form-grid">
+<div>
 
-                <div>
+<label>Email Address</label>
 
-                    <label>
+<input
+type="email"
+placeholder="john@email.com">
 
-                    Asset Title
+</div>
 
-                </label>
+<div>
 
-                    <input type="text" placeholder="e.g. Degree Certificate">
+<label>Institution</label>
 
-                </div>
+<input
+type="text"
+placeholder="Federal University Dutsin-Ma">
 
-                <div>
+</div>
 
-                    <label>
+<div>
 
-                    Asset Type
+<label>Certificate Type</label>
 
-                </label>
+<select>
 
-                    <label for="assetType">
+<option>Degree</option>
 
-                    Asset Type
-                    
-                    </label>
+<option>Transcript</option>
 
-                    <select id="assetType" name="assetType" title="Asset Type" aria-label="Asset Type">
+<option>NYSC</option>
 
-                    <option>Certificate</option>
+<option>Professional License</option>
 
-                    <option>Medical Record</option>
+<option>Employment Letter</option>
 
-                    <option>Employment Letter</option>
+</select>
 
-                    <option>Invoice</option>
+</div>
 
-                    <option>Contract</option>
+<div>
 
-                    <option>ID Card</option>
+<label>Issue Date</label>
 
-                    <option>License</option>
+<input type="date">
 
-                    <option>Other</option>
+</div>
 
-                </select>
+<div>
 
-                </div>
+<label>Expiry Date</label>
 
-                <div>
+<input type="date">
 
-                    <label>
+</div>
 
-                    Issuer
+</div>
 
-                </label>
+<label>Description</label>
 
-                    <input type="text" placeholder="Organization Name">
+<textarea rows="5"
+placeholder="Certificate description...">
+</textarea>
 
-                </div>
+<div class="issue-options">
 
-                <div>
+<label>
 
-                    <label>
+<input type="checkbox" checked>
 
-                    Recipient
+Generate Blockchain Hash
 
-                </label>
+</label>
 
-                    <input type="text" placeholder="Recipient Name">
+<label>
 
-                </div>
+<input type="checkbox" checked>
 
-            </div>
+Embed Secure QR Code
 
+</label>
 
+<label>
 
-            <label>
+<input type="checkbox" checked>
 
-            Description
+Digitally Sign Asset
 
-        </label>
+</label>
 
-            <textarea rows="5" placeholder="Asset description..."></textarea>
+<label>
 
+<input type="checkbox" checked>
 
+Run SINTEL AI Validation
 
-            <label>
+</label>
 
-            Upload Digital Asset
+</div>
 
-        </label>
+<button
+id="issueBtn"
+class="btn btn-primary">
 
-            <label for="assetFile">
+Issue Certificate
 
-            Upload Digital Asset
-            
-            </label>
+</button>
 
-            <input id="assetFile" name="assetFile" type="file" title="Upload Digital Asset" aria-label="Upload Digital Asset">
+</div>
 
+<div
+id="issueResult"
+class="glass ai-summary"
+style="display:none;margin-top:40px;">
 
+<h2>
+Certificate Successfully Issued
+</h2>
 
-            <div class="issue-options">
+<div class="trust-score">
+100%
+</div>
 
-                <div class="option-item">
-                    <input type="checkbox" id="generateQR" name="generateQR">
+<p>
 
-                    <label for="generateQR">
-                        Generate QR Verification
-                    </label>
-                </div>
+Certificate ID
 
-                <div class="option-item">
-                    <input type="checkbox" id="digitalSignature" name="digitalSignature">
+<br>
 
-                    <label for="digitalSignature">
-                        Create Digital Signature
-                    </label>
-                </div>
+<strong>
+TC-2026-004728
+</strong>
 
-                <div class="option-item">
-                    <input type="checkbox" id="sentinelAI" name="sentinelAI">
+</p>
 
-                    <label for="sentinelAI">
-                        Run Sentinel AI Analysis
-                    </label>
-                </div>
+<p>
 
-            </div>
+Blockchain Hash
 
+<br>
 
+<strong>
+4fc1ae9d29af...
+</strong>
 
-            <button class="btn btn-primary" type="submit">
+</p>
 
-            Issue Digital Asset
+<p>
 
-        </button>
+QR Authentication
 
-        </form>
+<br>
 
-    </div>
+<strong style="color:#22c55e;">
+ACTIVE
+</strong>
 
-    <script src="../js/issue.js"></script>
+</p>
 
+<p>
+
+SINTEL AI™
+
+<br>
+
+<strong style="color:#22c55e;">
+VALIDATED
+</strong>
+
+</p>
+
+</div>
+
+</div>
+
+<script src="../js/app.js"></script>
+<script src="../js/issue.js"></script>
 </body>
 
 </html>

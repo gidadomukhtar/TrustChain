@@ -1,8 +1,29 @@
-document.querySelector(".issue-form")
-    .addEventListener("submit", (e) => {
+document.addEventListener("DOMContentLoaded", () => {
 
-        e.preventDefault();
+const btn = document.getElementById("issueBtn");
 
-        alert("✅ Digital Asset Issued Successfully!");
+if (!btn) return;
 
-    });
+btn.addEventListener("click", () => {
+
+btn.disabled = true;
+
+btn.innerHTML = "Generating Certificate...";
+
+showToast("Generating Digital Certificate...", "success");
+
+setTimeout(() => {
+
+document.getElementById("issueResult").style.display = "block";
+
+btn.innerHTML = "Certificate Issued ✓";
+
+btn.style.background = "#22c55e";
+
+showToast("Certificate Successfully Issued", "success");
+
+},3000);
+
+});
+
+});

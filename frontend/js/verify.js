@@ -1,96 +1,181 @@
-const verifyBtn = document.getElementById("verifyBtn");
+document.addEventListener("DOMContentLoaded", () => {
 
-verifyBtn.addEventListener("click", () => {
+const verifyBtn=document.getElementById("verifyBtn");
 
-    const status = document.getElementById("statusText");
-    const score = document.getElementById("trustScore");
+if(!verifyBtn) return;
 
-    const sig = document.getElementById("sig");
-    const hash = document.getElementById("hash");
-    const qr = document.getElementById("qr");
-    const ai = document.getElementById("ai");
+verifyBtn.addEventListener("click",()=>{
 
-    const progress = document.getElementById("progressBar");
+const status=document.getElementById("verifyStatus");
 
-    progress.style.width = "0%";
+const progress=document.getElementById("progressBar");
 
-    status.style.color = "#FBBF24";
+const score=document.getElementById("trustScore");
 
-    score.innerHTML = "--";
+const recommendation=document.getElementById("recommendation");
 
-    sig.innerHTML = "...";
-    hash.innerHTML = "...";
-    qr.innerHTML = "...";
-    ai.innerHTML = "...";
+const terminal=document.getElementById("scanLog");
 
-    const steps = [
+const logs=[
 
-        "Initializing TrustChain Core...",
+"Initializing SINTEL AI...",
 
-        "Reading document...",
+"Reading document...",
 
-        "Running OCR Engine...",
+"OCR completed.",
 
-        "Extracting metadata...",
+"Scanning metadata...",
 
-        "Generating SHA-256 fingerprint...",
+"Generating SHA-256 fingerprint...",
 
-        "Checking digital signature...",
+"Comparing issuer template...",
 
-        "Comparing issuer database...",
+"Checking digital signature...",
 
-        "Scanning QR authentication...",
+"Searching forgery patterns...",
 
-        "Running SINTEL AI forensic analysis...",
+"Running neural analysis...",
 
-        "Checking fonts & layout consistency...",
+"Checking QR authenticity...",
 
-        "Detecting image manipulation...",
+"Confidence score generated...",
 
-        "Cross-checking timestamps...",
+"Verification complete."
 
-        "Computing Trust Score..."
+];
 
-    ];
+terminal.innerHTML="";
 
-    let i = 0;
+progress.style.width="0%";
 
-    const timer = setInterval(() => {
+status.innerHTML="Scanning...";
 
-        status.innerHTML = steps[i];
+score.innerHTML="--";
 
-        progress.style.width = ((i + 1) / steps.length) * 100 + "%";
+recommendation.innerHTML="";
 
-        if (i === 4)
-            hash.innerHTML = "✔ Valid";
+logs.forEach((log,index)=>{
 
-        if (i === 6)
-            sig.innerHTML = "✔ Verified";
+setTimeout(()=>{
 
-        if (i === 7)
-            qr.innerHTML = "✔ Authenticated";
+terminal.innerHTML+=`<div>> ${log}</div>`;
 
-        if (i === 10)
-            ai.innerHTML = "✔ No Forgery Detected";
+terminal.scrollTop=terminal.scrollHeight;
 
-        i++;
+progress.style.width=((index+1)/logs.length)*100+"%";
 
-        if (i >= steps.length) {
-
-            clearInterval(timer);
-
-            setTimeout(() => {
-
-                status.style.color = "#22C55E";
-
-                status.innerHTML = "🟢 DOCUMENT VERIFIED";
-
-                score.innerHTML = "99.84 / 100";
-
-            }, 700);
-
-        }
-
-    }, 700);
+},index*600);
 
 });
+
+setTimeout(()=>{
+
+status.innerHTML="✔ VERIFIED";
+
+status.style.color="#22c55e";
+
+score.innerHTML="99.84%";
+
+recommendation.innerHTML="Safe To Accept";
+
+document.getElementById("auth").innerHTML="Verified";
+
+document.getElementById("risk").innerHTML="Low";
+
+document.getElementById("ocr").innerHTML="99.97%";
+
+document.getElementById("meta").innerHTML="Passed";
+
+document.getElementById("sig").innerHTML="Valid";
+
+document.getElementById("hash").innerHTML="Matched";
+
+document.getElementById("qr").innerHTML="Verified";
+
+document.getElementById("ai").innerHTML="Authentic";
+
+terminal.innerHTML += `
+
+<hr>
+
+<div style="color:white">
+
+Forgery Probability : 0.16%
+
+<br>
+
+Issuer Verified : YES
+
+<br>
+
+Metadata Integrity : PASSED
+
+<br>
+
+Digital Signature : VALID
+
+<br>
+
+QR Authentication : VERIFIED
+
+</div>
+
+`;
+
+showToast("Verification Completed","success");
+
+},logs.length*600);
+
+});
+
+});
+const upload=document.querySelector(".upload-area");
+
+if(upload){
+
+upload.addEventListener("dragover",(e)=>{
+
+e.preventDefault();
+
+upload.style.borderColor="#00E5FF";
+
+});
+
+upload.addEventListener("dragleave",()=>{
+
+upload.style.borderColor="rgba(255,255,255,.12)";
+
+});
+
+upload.addEventListener("drop",(e)=>{
+
+e.preventDefault();
+
+upload.style.borderColor="rgba(255,255,255,.12)";
+
+showToast("Document Uploaded","success");
+
+});
+
+}
+function showToast(message,type="success"){
+
+const toast=document.createElement("div");
+
+toast.className=`toast ${type}`;
+
+toast.textContent=message;
+
+document.body.appendChild(toast);
+
+setTimeout(()=>toast.classList.add("show"),100);
+
+setTimeout(()=>{
+
+toast.classList.remove("show");
+
+setTimeout(()=>toast.remove(),400);
+
+},2500);
+
+}

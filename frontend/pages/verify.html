@@ -1,157 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verify Digital Asset | TrustChain</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
 
-    <title>Verify Digital Asset | TrustChain</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
-
-    <link rel="stylesheet" href="../css/variables.css" />
-    <link rel="stylesheet" href="../css/reset.css" />
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/components.css" />
-    <link rel="stylesheet" href="../css/layout.css" />
-    <link rel="stylesheet" href="../css/utilities.css" />
-    <link rel="stylesheet" href="../css/animations.css" />
-    <link rel="stylesheet" href="../css/responsive.css" />
+  <link rel="stylesheet" href="../css/variables.css" />
+  <link rel="stylesheet" href="../css/reset.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <link rel="stylesheet" href="../css/layout.css" />
+  <link rel="stylesheet" href="../css/utilities.css" />
+  <link rel="stylesheet" href="../css/animations.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
 </head>
 
 <body>
-    <div class="verify-page">
-        <div class="container">
-            <div class="verify-header">
-                <h1>Verify with SINTEL AI™</h1>
+  <div class="verify-page">
+    <div class="container">
+      
+      <div class="verify-header">
+        <h1>Verify with SINTEL AI™</h1>
+        <p>
+          Upload a certificate, transcript, identity document or scan a QR code. SINTEL AI™ will analyze authenticity, metadata, cryptographic integrity and forgery risk in seconds.
+        </p>
+      </div>
 
-                <p>
-                    Upload a certificate, transcript, identity document or scan a QR code. SINTEL AI™ will analyze authenticity, metadata, cryptographic integrity and forgery risk in seconds.
-                </p>
-            </div>
+      <div class="verify-grid">
+        
+        <div class="glass upload-card">
+          <h2>Upload for AI Analysis</h2>
 
-            <div class="verify-grid">
-                <!-- Upload -->
+          <div class="upload-area">
+            <div class="upload-icon">⬆</div>
+            <h3>Drop your document here</h3>
+            <p>PDF, JPG or PNG • Maximum 10MB</p>
 
-                <div class="glass upload-card">
-                    <h2>Upload for AI Analysis</h2>
+            <label for="document">Choose Digital Asset</label>
+            <input id="document" name="document" type="file" title="Choose Digital Asset" aria-label="Choose Digital Asset" />
+          </div>
 
-                    <div class="upload-area">
-                        <div class="upload-icon">⬆</div>
+          <div class="divider">
+            <span>OR</span>
+          </div>
 
-                        <h3>Drop your document here</h3>
+          <input class="trust-input" type="text" placeholder="Enter TrustChain ID" />
 
-                        <p>PDF, JPG or PNG • Maximum 10MB</p>
-
-                        <label for="document"> Choose Digital Asset </label>
-
-                        <input id="document" name="document" type="file" title="Choose Digital Asset" aria-label="Choose Digital Asset" />
-                    </div>
-
-                    <div class="divider">
-                        <span>OR</span>
-                    </div>
-
-                    <input class="trust-input" type="text" placeholder="Enter TrustChain ID" />
-
-                    <button id="verifyBtn" class="btn btn-primary">
-              Analyze with SINTEL AI™
-            </button>
-                </div>
-
-                <!-- Report -->
-
-                <!-- Report -->
-
-                <div class="glass report-card">
-                    <div class="badge">SINTEL AI™ v1.0</div>
-
-                    <h2 style="margin-top: 20px">SINTEL AI™ Verification Report</h2>
-
-                    <div class="progress">
-                        <div id="progressBar"></div>
-                    </div>
-
-                    <div id="statusText" class="verify-status">
-                        Ready for Verification
-                    </div>
-
-                    <div class="trust-score">
-                        <span id="trustScore">--</span>
-                    </div>
-                    <div class="ai-summary glass">
-                        <h3>SINTEL AI™ Findings</h3>
-
-                        <ul>
-                            <li>✔ OCR Confidence: 99.97%</li>
-
-                            <li>✔ Layout matches issuer template</li>
-
-                            <li>✔ Metadata integrity confirmed</li>
-
-                            <li>✔ Digital signature verified</li>
-
-                            <li>✔ No evidence of manipulation</li>
-
-                            <li>✔ Recommended: ACCEPT DOCUMENT</li>
-                        </ul>
-                    </div>
-
-                    <div class="report-row">
-                        <span>Authenticity</span>
-                        <strong id="auth">Pending</strong>
-                    </div>
-
-                    <div class="report-row">
-                        <span>Forgery Risk</span>
-                        <strong id="risk">Pending</strong>
-                    </div>
-
-                    <div class="report-row">
-                        <span>OCR Analysis</span>
-                        <strong id="ocr">Pending</strong>
-                    </div>
-
-                    <div class="report-row">
-                        <span>Metadata Integrity</span>
-                        <strong id="meta">Pending</strong>
-                    </div>
-
-                    <div class="report-row">
-                        <span>Digital Signature</span>
-                        <strong id="sig">Pending</strong>
-                    </div>
-
-                    <div class="report-row">
-                        <span>Cryptographic Hash</span>
-                        <strong id="hash">Pending</strong>
-                    </div>
-
-                    <div class="report-row">
-                        <span>QR Verification</span>
-                        <strong id="qr">Pending</strong>
-                    </div>
-
-                    <div class="report-row">
-                        <span>SINTEL AI™ Verdict</span>
-                        <strong id="ai">Pending</strong>
-                    </div>
-
-                    <div class="report-row">
-                        <span>Recommendation</span>
-                        <strong id="recommendation">Pending</strong>
-                    </div>
-                </div>
-            </div>
+          <button id="verifyBtn" class="btn btn-primary">
+            Analyze with SINTEL AI™
+          </button>
         </div>
+
+        <div class="glass report-card">
+          <div class="badge">SINTEL AI™ v1.0</div>
+
+          <h2 style="margin-top: 20px;">SINTEL AI™ Verification Report</h2>
+
+          <div class="progress">
+            <div id="progressBar"></div>
+          </div>
+
+          <div class="glass ai-summary">
+            <h3>Live AI Scan</h3>
+            <div id="scanLog" class="terminal-window">
+              <div>> Waiting for verification...</div>
+            </div>
+          </div>
+
+          <div class="glass ai-summary">
+            <h3>AI Trust Score</h3>
+            <h1 id="trustScore" class="trust-score">--</h1>
+            <p id="recommendation">
+              Waiting for verification...
+            </p>
+          </div>          
+
+          <div id="verifyStatus" class="verify-status">
+            Ready for Verification
+          </div>
+          
+          <div class="ai-summary glass">
+            <h3>SINTEL AI™ Findings</h3>
+            <ul>
+              <li>✔ OCR Confidence: 99.97%</li>
+              <li>✔ Layout matches issuer template</li>
+              <li>✔ Metadata integrity confirmed</li>
+              <li>✔ Digital signature verified</li>
+              <li>✔ No evidence of manipulation</li>
+              <li>✔ Recommended: ACCEPT DOCUMENT</li>
+            </ul>
+          </div>
+
+          <div class="report-row">
+            <span>Authenticity</span>
+            <strong id="auth">Pending</strong>
+          </div>
+
+          <div class="report-row">
+            <span>Forgery Risk</span>
+            <strong id="risk">Pending</strong>
+          </div>
+
+          <div class="report-row">
+            <span>OCR Analysis</span>
+            <strong id="ocr">Pending</strong>
+          </div>
+
+          <div class="report-row">
+            <span>Metadata Integrity</span>
+            <strong id="meta">Pending</strong>
+          </div>
+
+          <div class="report-row">
+            <span>Digital Signature</span>
+            <strong id="sig">Pending</strong>
+          </div>
+
+          <div class="report-row">
+            <span>Cryptographic Hash</span>
+            <strong id="hash">Pending</strong>
+          </div>
+
+          <div class="report-row">
+            <span>QR Verification</span>
+            <strong id="qr">Pending</strong>
+          </div>
+
+          <div class="report-row">
+            <span>SINTEL AI™ Verdict</span>
+            <strong id="ai">Pending</strong>
+          </div>
+
+          <div class="report-row">
+            <span>Recommendation</span>
+            <strong id="recommendation">Pending</strong>
+          </div>
+        </div>
+
+      </div>
     </div>
+  </div>
 
-    <script src="../js/verify.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/verify.js"></script>
 </body>
-
 </html>
